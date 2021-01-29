@@ -1,7 +1,11 @@
+
+
 .container {
   width: 1140px;
   margin: 0;
   display: flex;
+
+
 
 }
 
@@ -25,21 +29,27 @@
 
 .photos {
   margin-top: 50px;
-  margin-left: 50px;
+  margin-left: 40px;
+  width: 640px;
+  justify-content: center;
+  
+
+
 
 }
 
 .photos-and-title {
   padding: 10px;
+  flex-wrap: wrap;
+  align-self: center;
+  margin-left: 10px;
+
+
+
 }
 
-.img {
-  width: 300px;
-  display: flex;
-  margin-top: 10px;
-}
-.img img {
-  width: 100%;
+.col {
+  width: 200px;
 }
 
 .choose-album {
@@ -51,4 +61,19 @@
 .input {
   width: 100%;
 }
+
+.flex {
+  display: flex;
+}
+.title {
+  margin-bottom: 40px;
+}
+
+.picture {
+  width: 100%;
+
+
+}
+
+
 

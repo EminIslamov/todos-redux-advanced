@@ -39,9 +39,13 @@ function Photos (props) {
         value={filter}
         onChange={handleFilterPhotos}
       />
-      {filteredPhotos.map(photo => {
-        return <Photo photo={photo} key={photo.id} />
-      })}
+      <div className="flex photos-and-title">
+        {filteredPhotos.map(photo => {
+          return (
+            <Photo photo={photo} key={photo.id} />
+          )
+        })}
+      </div>
     </div>
   )
 }
