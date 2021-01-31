@@ -4,9 +4,9 @@ import Photo from './Photo'
 import { setFilterPhotos } from '../redux/actions'
 
 function Photos (props) {
-  const photos = useSelector(state => state.photos);
-  const selectedUserId = useSelector(state => state.selectedUserId)
-  const filter = useSelector(state => state.filter)
+  const photos = useSelector(state => state.photos.photos);
+  const selectedAlbumId = useSelector(state => state.albums.selectedAlbumId)
+  const filter = useSelector(state => state.photos.filter)
 
   const dispatch = useDispatch();
 
@@ -15,14 +15,14 @@ function Photos (props) {
   }
 
   const filteredPhotos = photos.filter(photo => {
-    if (selectedUserId === photo.albumId && photo.title.indexOf(filter) > -1) {
+    if (selectedAlbumId === photo.albumId && photo.title.indexOf(filter) > -1) {
       return true;
     }
 
     return false;
   })
 
-  if (selectedUserId === null){
+  if (selectedAlbumId === null){
     return(
       <div className="choose-album">
         Выберите альбом слева
