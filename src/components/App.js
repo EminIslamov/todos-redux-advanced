@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { loadAlbums, loadPhotos } from '../redux/actions'
 import Albums from './Albums'
 import Photos from './Photos'
+import { Route } from 'react-router-dom'
 
 function App() {
   const loadingAlbums = useSelector(state => state.albums.loading);
@@ -26,7 +27,9 @@ function App() {
   return (
     <div className="container">
       <Albums />
-      <Photos />
+      <Route path="/:id?">
+        <Photos/>
+      </Route>
     </div>
   );
 }

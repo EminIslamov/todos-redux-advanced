@@ -2,10 +2,12 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Photo from './Photo'
 import { setFilterPhotos } from '../redux/actions'
-
+import { useParams } from 'react-router-dom'
 function Photos (props) {
   const photos = useSelector(state => state.photos.photos);
-  const selectedAlbumId = useSelector(state => state.albums.selectedAlbumId)
+
+  const id = parseInt(useParams().id);
+
   const filter = useSelector(state => state.photos.filter)
 
   const dispatch = useDispatch();
@@ -15,14 +17,14 @@ function Photos (props) {
   }
 
   const filteredPhotos = photos.filter(photo => {
-    if (selectedAlbumId === photo.albumId && photo.title.indexOf(filter) > -1) {
+    if (id === photo.albumId && photo.title.indexOf(filter) > -1) {
       return true;
     }
 
     return false;
   })
 
-  if (selectedAlbumId === null){
+  if (!id){
     return(
       <div className="choose-album">
         Выберите альбом слева
