@@ -1,13 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Photo (props) {
+function Photo(props) {
   return (
     <div className="col">
-        <img src={props.photo.url} alt=""
-             className="picture"
-        />
+      <img src={props.photo.url} alt="" className="picture" />
     </div>
-  )
+  );
 }
 
-export default Photo
+export default Photo;
