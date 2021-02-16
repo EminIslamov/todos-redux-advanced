@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 function Album(props) {
   return (
@@ -9,6 +10,14 @@ function Album(props) {
       </Link>
     </li>
   );
+}
+
+Album.propTypes = {
+  album: PropTypes.shape({
+    userId: PropTypes.number,
+    id: PropTypes.number,
+    title: PropTypes.string
+  })
 }
 
 export default Album;
