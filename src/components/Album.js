@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 function Album(props) {
   return (
@@ -16,8 +16,8 @@ Album.propTypes = {
   album: PropTypes.shape({
     userId: PropTypes.number,
     id: PropTypes.number,
-    title: PropTypes.string
-  })
-}
+    title: PropTypes.string,
+  }),
+};
 
 export default Album;

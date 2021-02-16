@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 function Photo(props) {
   return (
@@ -15,8 +15,8 @@ Photo.propTupes = {
     id: PropTypes.number,
     title: PropTypes.string,
     url: PropTypes.string,
-    thumbnailUrl: PropTypes.string
-  })
-}
+    thumbnailUrl: PropTypes.string,
+  }),
+};
 
 export default Photo;

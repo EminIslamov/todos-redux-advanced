@@ -5,9 +5,6 @@ import Album from './Album';
 function Albums(props) {
   const albums = useSelector((state) => state.albums.albums);
 
-
-
-
   return (
     <div className="albums">
       <ul>
